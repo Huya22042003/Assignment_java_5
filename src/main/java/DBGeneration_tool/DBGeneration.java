@@ -1,5 +1,6 @@
 package DBGeneration_tool;
 
+import com.assignment.entity.ChiTietAnh;
 import com.assignment.entity.ChiTietSanPham;
 import com.assignment.entity.ChucVu;
 import com.assignment.entity.CuaHang;
@@ -12,6 +13,7 @@ import com.assignment.entity.MauSac;
 import com.assignment.entity.NSX;
 import com.assignment.entity.NhanVien;
 import com.assignment.entity.SanPham;
+import com.assignment.repository.ChiTietAnhRepository;
 import com.assignment.repository.ChiTietSanPhamRepository;
 import com.assignment.repository.ChuVuRepository;
 import com.assignment.repository.CuaHanRepository;
@@ -80,6 +82,9 @@ public class DBGeneration  implements CommandLineRunner {
 
     @Autowired
     private ChiTietSanPhamRepository chiTietSanPhamRepository;
+
+    @Autowired
+    private ChiTietAnhRepository chiTietAnhRepository;
 
     @Override
     public void run(String... args) throws Exception {
@@ -399,6 +404,32 @@ public class DBGeneration  implements CommandLineRunner {
         chiTietSanPham6.setNamBh(2);
         chiTietSanPham6.setNgayNhap(DateTimeUtil.convertDateToTimeStampSecond());
         chiTietSanPham6.setId(chiTietSanPhamRepository.save(chiTietSanPham6).getId());
+
+        ChiTietAnh chiTietAnh1 = new ChiTietAnh();
+        chiTietAnh1.setIdChiTietSp(chiTietSanPham.getId());
+        chiTietAnh1.setFileName("a.png");
+        chiTietAnh1.setId(chiTietAnhRepository.save(chiTietAnh1).getId());
+
+        ChiTietAnh chiTietAnh2 = new ChiTietAnh();
+        chiTietAnh2.setIdChiTietSp(chiTietSanPham1.getId());
+        chiTietAnh2.setFileName("b.png");
+        chiTietAnh2.setId(chiTietAnhRepository.save(chiTietAnh2).getId());
+
+        ChiTietAnh chiTietAnh3 = new ChiTietAnh();
+        chiTietAnh3.setIdChiTietSp(chiTietSanPham2.getId());
+        chiTietAnh3.setFileName("c.png");
+        chiTietAnh3.setId(chiTietAnhRepository.save(chiTietAnh3).getId());
+
+
+        ChiTietAnh chiTietAnh4 = new ChiTietAnh();
+        chiTietAnh4.setIdChiTietSp(chiTietSanPham2.getId());
+        chiTietAnh4.setFileName("c1.png");
+        chiTietAnh4.setId(chiTietAnhRepository.save(chiTietAnh4).getId());
+
+        ChiTietAnh chiTietAnh5 = new ChiTietAnh();
+        chiTietAnh5.setIdChiTietSp(chiTietSanPham1.getId());
+        chiTietAnh5.setFileName("a1.png");
+        chiTietAnh5.setId(chiTietAnhRepository.save(chiTietAnh5).getId());
 
         HoaDonChiTiet hoaDonChiTiet = new HoaDonChiTiet();
         hoaDonChiTiet.setIdHoaDon(hoaDon1.getId());
