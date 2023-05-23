@@ -1,6 +1,6 @@
 package com.assignment.entity;
 
-import com.assignment.infrastructure.contants.GioHangConstans;
+import com.assignment.infrastructure.constant.GioHangConstans;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -12,7 +12,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.Serializable;
-import java.util.UUID;
 
 @Table(name = "gio_hang")
 @Entity

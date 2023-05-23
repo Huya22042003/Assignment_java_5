@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class KhAddSanPhamGioHang {
+public class KhAddSanPhamGioHangRequest {
 
     private int soLuongMua;
 

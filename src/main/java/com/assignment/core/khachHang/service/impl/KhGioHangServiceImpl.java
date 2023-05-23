@@ -1,7 +1,7 @@
 package com.assignment.core.khachHang.service.impl;
 
 import com.assignment.core.common.base.PageableObject;
-import com.assignment.core.khachHang.model.request.KhAddSanPhamGioHang;
+import com.assignment.core.khachHang.model.request.KhAddSanPhamGioHangRequest;
 import com.assignment.core.khachHang.model.request.KhCreateGioHangRequest;
 import com.assignment.core.khachHang.model.request.KhUpdateGioHangRequest;
 import com.assignment.core.khachHang.model.response.KhGioHangChiTietResponse;
@@ -12,9 +12,9 @@ import com.assignment.core.khachHang.service.KhGioHangService;
 import com.assignment.entity.GioHang;
 import com.assignment.entity.GioHangChiTiet;
 import com.assignment.entity.GioHangChiTietId;
-import com.assignment.infrastructure.contants.GioHangConstans;
-import com.assignment.infrastructure.contants.KhachHangTestContants;
-import com.assignment.infrastructure.contants.PaginationConstant;
+import com.assignment.infrastructure.constant.GioHangConstans;
+import com.assignment.infrastructure.constant.KhachHangTestContants;
+import com.assignment.infrastructure.constant.PaginationConstant;
 import com.assignment.utils.DateTimeUtil;
 import com.assignment.utils.GeneraterMa;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -120,7 +120,7 @@ public class KhGioHangServiceImpl implements KhGioHangService {
     }
 
     @Override
-    public boolean themSanPhamVaoGioHang(KhAddSanPhamGioHang addSanPhamGioHang, Long idSanPham, Long idGioHang) {
+    public boolean themSanPhamVaoGioHang(KhAddSanPhamGioHangRequest addSanPhamGioHang, Long idSanPham, Long idGioHang) {
         try {
             GioHangChiTiet gioHangChiTiet = new GioHangChiTiet();
             gioHangChiTiet.setIdGioHang(idGioHang);
@@ -137,7 +137,7 @@ public class KhGioHangServiceImpl implements KhGioHangService {
     }
 
     @Override
-    public boolean updateGioHang(KhAddSanPhamGioHang addSanPhamGioHang, Long idSanPham, Long idGioHang) {
+    public boolean updateGioHang(KhAddSanPhamGioHangRequest addSanPhamGioHang, Long idSanPham, Long idGioHang) {
         try {
             GioHangChiTietId gioHangChiTietId = new GioHangChiTietId(idGioHang, idSanPham);
             Optional<GioHangChiTiet> optionalGioHangChiTiet = gioHangChiTietRepository.findById(gioHangChiTietId);
