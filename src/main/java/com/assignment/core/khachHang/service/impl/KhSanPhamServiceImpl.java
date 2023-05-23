@@ -6,7 +6,7 @@ import com.assignment.core.khachHang.model.response.KhSanPhamResponse;
 import com.assignment.core.khachHang.repository.KhChiTietSanPhamRepository;
 import com.assignment.core.khachHang.repository.KhSanPhamRepository;
 import com.assignment.core.khachHang.service.KhSanPhamService;
-import com.assignment.infrastructure.contants.PaginationConstant;
+import com.assignment.infrastructure.constant.PaginationConstant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

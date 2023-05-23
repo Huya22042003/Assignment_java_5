@@ -1,4 +1,4 @@
-package com.assignment.infrastructure.contants;
+package com.assignment.infrastructure.constant;
 
 /**
  * @author phongtt35

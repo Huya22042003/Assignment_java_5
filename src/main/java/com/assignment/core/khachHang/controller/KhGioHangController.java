@@ -1,7 +1,7 @@
 package com.assignment.core.khachHang.controller;
 
 import com.assignment.core.common.base.ResponseObject;
-import com.assignment.core.khachHang.model.request.KhAddSanPhamGioHang;
+import com.assignment.core.khachHang.model.request.KhAddSanPhamGioHangRequest;
 import com.assignment.core.khachHang.model.request.KhCreateGioHangRequest;
 import com.assignment.core.khachHang.model.request.KhUpdateGioHangRequest;
 import com.assignment.core.khachHang.service.KhGioHangService;
@@ -51,14 +51,14 @@ public class KhGioHangController {
     }
 
     @PostMapping("/add-gio-hang")
-    public ResponseObject addGioHang(@RequestBody KhAddSanPhamGioHang addSanPhamGioHang,
+    public ResponseObject addGioHang(@RequestBody KhAddSanPhamGioHangRequest addSanPhamGioHang,
                                      @RequestParam(name = "idSanPham", defaultValue = "0") Long idSp,
                                      @RequestParam(name = "idGioHang", defaultValue = "0") Long idGh) {
         return new ResponseObject(gioHangService.themSanPhamVaoGioHang(addSanPhamGioHang, idSp, idGh));
     }
 
     @PutMapping("/update-gio-hang")
-    public ResponseObject updateGioHang(@RequestBody KhAddSanPhamGioHang addSanPhamGioHang,
+    public ResponseObject updateGioHang(@RequestBody KhAddSanPhamGioHangRequest addSanPhamGioHang,
                                      @RequestParam(name = "idSanPham", defaultValue = "0") Long idSp,
                                      @RequestParam(name = "idGioHang", defaultValue = "0") Long idGh) {
         return new ResponseObject(gioHangService.updateGioHang(addSanPhamGioHang, idSp, idGh));
