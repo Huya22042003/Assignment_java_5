@@ -10,11 +10,11 @@ public interface NvChucVuRepository extends ChuVuRepository {
 
 
     @Query(value = """
-            SELECT ca.id, ca.code, ca.name, ca.last_modified_date
-            FROM category ca
-            ORDER BY ca.last_modified_date DESC
+            SELECT ca.id, ca.ma, ca.ten
+            FROM chuc_vu ca
             """, countQuery = """
-
+            SELECT COUNT(ca.id)
+            FROM chuc_vu ca
             """, nativeQuery = true)
-    Page<NvChucVuResponse> getAllCategoryByCensor(Pageable pageable);
+    Page<NvChucVuResponse> getAllChucVu(Pageable pageable);
 }

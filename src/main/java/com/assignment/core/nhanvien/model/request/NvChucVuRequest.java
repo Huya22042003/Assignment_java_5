@@ -1,4 +1,6 @@
 package com.assignment.core.nhanvien.model.request;
 
-public class NvChucVuRequest {
+import com.assignment.core.common.base.PageableRequest;
+
+public class NvChucVuRequest extends PageableRequest {
 }
