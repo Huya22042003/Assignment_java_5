@@ -7,7 +7,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class NvCreateChucVuRequest {
+public class NvCreateSanPhamRequest {
     @NotBlank(message = "Ma is not null")
     private String ma;
 

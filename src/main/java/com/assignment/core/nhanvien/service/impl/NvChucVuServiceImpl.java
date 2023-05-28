@@ -7,8 +7,12 @@ import com.assignment.core.nhanvien.model.response.NvChucVuResponse;
 import com.assignment.core.nhanvien.repository.NvChucVuRepository;
 import com.assignment.core.nhanvien.service.NvChucVuService;
 import com.assignment.entity.ChucVu;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
 
-import java.awt.print.Pageable;
 import java.util.Optional;
 
 @Service
@@ -19,7 +23,7 @@ public class NvChucVuServiceImpl implements NvChucVuService {
 
     @Override
     public PageableObject<NvChucVuResponse> getAll(NvChucVuRequest request) {
-        Pageable pageable = PageRequest.of(request.getPage(), request.getSize());
+        Pageable pageable =  PageRequest.of(request.getPage(), request.getSize());
         Page<NvChucVuResponse> res = nvChucVuRepository.getAllChucVu(pageable);
         return new PageableObject<>(res);
     }

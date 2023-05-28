@@ -1,7 +1,7 @@
 package com.assignment.core.khachHang.model.response;
 
 import com.assignment.entity.ChiTietSanPham;
-import com.assignment.entity.DongSp;
+import com.assignment.entity.DongSP;
 import com.assignment.entity.MauSac;
 import com.assignment.entity.NSX;
 import com.assignment.entity.SanPham;
@@ -9,9 +9,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.rest.core.config.Projection;
 
 import java.math.BigDecimal;
-import java.util.UUID;
 
-@Projection(types = {ChiTietSanPham.class, SanPham.class, NSX.class, MauSac.class, DongSp.class})
+@Projection(types = {ChiTietSanPham.class, SanPham.class, NSX.class, MauSac.class, DongSP.class})
 public interface KhChiTietSanPhamResponse {
 
     @Value("#{target.id}")

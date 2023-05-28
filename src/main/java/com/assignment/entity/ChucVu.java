@@ -21,7 +21,6 @@ import java.io.Serializable;
 @AllArgsConstructor
 @Builder
 public class ChucVu implements Serializable {
-
     @Id
     @Column(name = "id" )
     @GeneratedValue

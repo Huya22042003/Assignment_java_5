@@ -2,7 +2,7 @@ package com.assignment.core.nhanvien.model.response;
 
 import org.springframework.beans.factory.annotation.Value;
 
-public interface NvChucVuResponse {
+public interface NvCuaHangResponse {
 
     @Value("#{target.id}")
     Long getId();
@@ -12,4 +12,7 @@ public interface NvChucVuResponse {
 
     @Value("#{target.ten}")
     String getTen();
+
+    @Value("#{target.dia_chi}")
+    String getDiaChi();
 }

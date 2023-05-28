@@ -7,10 +7,13 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class NvCreateChucVuRequest {
+public class NvCreateCuaHangRequest {
     @NotBlank(message = "Ma is not null")
     private String ma;
 
     @NotBlank(message = "Ten is not null")
     private String ten;
+
+    @NotBlank(message = "Dia chi is not null")
+    private String diaChi;
 }

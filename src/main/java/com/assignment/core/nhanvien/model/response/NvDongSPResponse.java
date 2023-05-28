@@ -2,14 +2,14 @@ package com.assignment.core.nhanvien.model.response;
 
 import org.springframework.beans.factory.annotation.Value;
 
-public interface NvChucVuResponse {
+public interface NvDongSPResponse {
 
     @Value("#{target.id}")
     Long getId();
 
-    @Value("#{target.ma}")
+    @Value("#{target.ma_dong_sp}")
     String getMa();
 
-    @Value("#{target.ten}")
+    @Value("#{target.ten_dong_sp}")
     String getTen();
 }

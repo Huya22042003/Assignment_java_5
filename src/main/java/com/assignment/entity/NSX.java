@@ -6,11 +6,10 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.util.UUID;
 
 @Table(name = "nsx")
 @Entity
@@ -18,6 +17,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @Getter
 @Setter
+@Builder
 public class NSX {
 
     @Id

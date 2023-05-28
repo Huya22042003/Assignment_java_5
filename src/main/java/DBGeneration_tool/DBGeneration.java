@@ -4,8 +4,7 @@ import com.assignment.entity.ChiTietAnh;
 import com.assignment.entity.ChiTietSanPham;
 import com.assignment.entity.ChucVu;
 import com.assignment.entity.CuaHang;
-import com.assignment.entity.DongSp;
-import com.assignment.entity.GioHang;
+import com.assignment.entity.DongSP;
 import com.assignment.entity.HoaDon;
 import com.assignment.entity.HoaDonChiTiet;
 import com.assignment.entity.KhachHang;
@@ -16,7 +15,7 @@ import com.assignment.entity.SanPham;
 import com.assignment.repository.ChiTietAnhRepository;
 import com.assignment.repository.ChiTietSanPhamRepository;
 import com.assignment.repository.ChuVuRepository;
-import com.assignment.repository.CuaHanRepository;
+import com.assignment.repository.CuaHangRepository;
 import com.assignment.repository.DongSpRepository;
 import com.assignment.repository.GioHangChiTietRepository;
 import com.assignment.repository.GioHangRepository;
@@ -48,7 +47,7 @@ public class DBGeneration  implements CommandLineRunner {
     private ChuVuRepository chuVuRepository;
 
     @Autowired
-    private CuaHanRepository cuaHanRepository;
+    private CuaHangRepository cuaHangRepository;
 
     @Autowired
     private DongSpRepository dongSpRepository;
@@ -103,22 +102,22 @@ public class DBGeneration  implements CommandLineRunner {
         cuaHang.setMa("CH01");
         cuaHang.setTen("Cửa Hàng Vui Vẻ");
         cuaHang.setDiaChi("Trịnh Văn Bô, Nam Từ Niêm, Hà Nội");
-        cuaHang.setId(cuaHanRepository.save(cuaHang).getId());
+        cuaHang.setId(cuaHangRepository.save(cuaHang).getId());
 
-        DongSp dongSp = new DongSp();
+        DongSP dongSp = new DongSP();
         dongSp.setTen("Dong 1");
         dongSp.setMa("DONG01");
         dongSp.setId(dongSpRepository.save(dongSp).getId());
 
-        DongSp dongSp1 = new DongSp();
-        dongSp1.setTen("dongSp1");
-        dongSp1.setMa("dongSp1");
-        dongSp1.setId(dongSpRepository.save(dongSp1).getId());
+        DongSP dongSP1 = new DongSP();
+        dongSP1.setTen("dongSp1");
+        dongSP1.setMa("dongSp1");
+        dongSP1.setId(dongSpRepository.save(dongSP1).getId());
 
-        DongSp dongSp2 = new DongSp();
-        dongSp2.setTen("dongSp2");
-        dongSp2.setMa("dongSp2");
-        dongSp2.setId(dongSpRepository.save(dongSp2).getId());
+        DongSP dongSP2 = new DongSP();
+        dongSP2.setTen("dongSp2");
+        dongSP2.setMa("dongSp2");
+        dongSP2.setId(dongSpRepository.save(dongSP2).getId());
 
         MauSac mauSac = new MauSac();
         mauSac.setMa("#000");
